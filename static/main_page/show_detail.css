@@ -1,0 +1,33 @@
+body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding-top: 70px;
+            background: url("https://i.pinimg.com/736x/e3/7d/a9/e37da92d1e32051af32a81a8950733f3.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        footer {
+            background-color: #171716;
+            color: yellow;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .book-card {
+            margin-bottom: 20px;
+        }
+
+        .comment-section {
+            margin-top: 40px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .comment {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }

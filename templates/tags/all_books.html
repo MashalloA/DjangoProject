@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<a href="{% url 'pensioner' %}">для пенсионеров</a>
+<a href="{% url 'youth' %}">для молодёжи</a>
+<a href="{% url 'teenager' %}">для подростков</a>
+<a href="{% url 'kid' %}">для детей</a>
+
+{% for i in books %}
+
+<p>{{ i.name }}</p>
+<p>{{ i.price }}</p>
+
+{% endfor %}
+
+</body>
+</html>
