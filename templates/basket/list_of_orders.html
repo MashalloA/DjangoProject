@@ -1,0 +1,18 @@
+{% load static %}
+{% include 'components/header.html' %}
+<ul>
+    {% for i in list_of_orders %}
+    <li>
+        <div class="shadowbox">
+        <h1>{{ i.name }}</h1>
+        <p>{{ i.email }}</p>
+        <p>{{ i.phone_number }}</p>
+        <p>{{ i.book }}</p>
+        <p>{{ i.library }}</p>
+        <p>{{ i.choice_check }}</p>
+        </div>
+    </li>
+    {% endfor %}
+
+</ul>
+<a href="{%url 'BasketList'%}">Назад</a>

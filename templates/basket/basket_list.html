@@ -1,0 +1,18 @@
+{% load static %}
+{% include 'components/header.html' %}
+
+<ul>
+    {% for i in basket_list %}
+    <li>
+        <div class="shadowbox">
+            <h1>{{ i.name }}</h1>
+            <p>{{ i.library }}</p>
+            <a href="/basket_list/{{i.id}}/update/">Редактирование</a>
+            <a href="/basket_list/{{i.id}}/delete/">Удаление</a>
+            <a href="/basket_list/{{i.id}}/">Детальная информация</a>
+        </div>
+    </li>
+    {% endfor %}
+    <li><h2><a href="{% url 'CreatBasket' %}">Создание</a></h2></li>
+    <li><h2><a href="{% url 'List_of_orders'%}">Список заказов</a></h2></li>
+</ul>

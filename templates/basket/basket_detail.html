@@ -1,0 +1,10 @@
+{% load static %}
+{% include 'components/header.html' %}
+
+<h1>{{basket_id.name}}</h1>
+<p>{{basket_id.email}}</p>
+<p>{{basket_id.phone_number}}</p>
+<p>{{basket_id.book}}</p>
+<p>{{basket_id.library}}</p>
+<p>{{basket_id.choice_check}}</p>
+<a href="{%url 'BasketList'%}">Назад</a>
