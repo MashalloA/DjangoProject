@@ -26,9 +26,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # startapps
     'library_blog',
     'book_tags',
-    'Basket'
+    'Basket',
+    'parser_app',
 ]
 
 MIDDLEWARE = [
