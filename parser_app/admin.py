@@ -1,3 +1,4 @@
 from django.contrib import admin
+from parser_app.models import MangaModel
 
-# Register your models here.
+admin.site.register(MangaModel)
