@@ -1,0 +1,22 @@
+<ol>
+    {% for i in persons %}
+    <li>
+        <h2>Никнейм: {{ i.username }}</h2>
+        <p>Почта: {{ i.email }}</p>
+        <p>Имя: {{ i.first_name }}</p>
+        <p>Фамилия: {{ i.last_name }}</p>
+        <p>Возраст: {{ i.age }}</p>
+        <p>Стаж: {{ i.experience }}</p>
+        {% if i.level %}
+        <p>Ваш уровень как специалиста - {{ i.level }}</p>
+        {% else %}
+        <p>Уровень не определен</p>
+        {% endif %}
+
+    </li>
+    {% endfor %}
+</ol>
+<form action="{% url 'users:login' %}" method="POST">
+    {% csrf_token %}
+    <button type="submit">Выйти из аккаунта</button>
+</form>
