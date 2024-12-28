@@ -1,2 +1,6 @@
-__pycache__/
-.idea/
+venv
+idea
+static
+db.sqlite3
+media
+.env
