@@ -1,0 +1,15 @@
+<h1>{{ recipe.title }}</h1>
+<p>{{ recipe.description }}</p>
+<p>Общее количество калорий: {{ total_calories }} ккал</p>
+
+<h2>Ингредиенты:</h2>
+<ul>
+    {% for ingredient in recipe.ingredients.all %}
+        <li>
+            {{ ingredient.name }}: {{ ingredient.quantity }} {{ ingredient.unit }}
+            {% if ingredient.is_optional %}(необязательно){% endif %}
+            {% if ingredient.calories %} - {{ ingredient.calories }} ккал{% endif %}
+            {% if ingredient.notes %} - {{ ingredient.notes }}{% endif %}
+        </li>
+    {% endfor %}
+</ul>

@@ -1,5 +1,7 @@
 from django.db import models
 from book_tags.models import Books
+from resipe.models import Recipe
+
 
 class BasketModel(models.Model):
     CHECKING = (
@@ -15,4 +17,5 @@ class BasketModel(models.Model):
 
     def __str__(self):
         return self.name
+
 

@@ -8,8 +8,9 @@ urlpatterns = [
     path('', include('library_blog.urls')),
     path('', include('book_tags.urls')),
     path('', include('Basket.urls')),
-    path('', include('parser_app.urls')),
+    # path('', include('parser_app.urls')),
     path('', include('users.urls')),
+    path('', include('resipe.urls')),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
