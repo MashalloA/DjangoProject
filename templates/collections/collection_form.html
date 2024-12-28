@@ -1,0 +1,12 @@
+<form method="post">
+    {% csrf_token %}
+    <label for="name">Название коллекции:</label>
+    <input type="text" name="name" id="name" required>
+
+    <label>Выберите рецепты:</label>
+    {% for recipe in recipes %}
+        <input type="checkbox" name="recipes" value="{{ recipe.id }}"> {{ recipe.title }}<br>
+    {% endfor %}
+
+    <button type="submit">Создать коллекцию</button>
+</form>

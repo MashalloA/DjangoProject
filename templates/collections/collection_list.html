@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список коллекций</title>
+</head>
+<body>
+    <h1>Список коллекций</h1>
+    <ul>
+        {% for collection in collections %}
+            <li>{{ collection.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

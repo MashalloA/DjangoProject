@@ -1,8 +1,8 @@
 from django.views.generic import ListView, DetailView, CreateView
-from .models import Recipe
-from .forms import RecipeForm
+from .models import Recipe, Collection
+from .forms import RecipeForm, CollectionForm
 from django.urls import reverse_lazy
-from .forms import CollectionForm
+
 
 
 class RecipeListView(ListView):
@@ -25,13 +25,13 @@ class RecipeCreateView(CreateView):
 
 
 class CollectionCreateView(CreateView):
-    model = CollectionForm
+    model = Collection
     form_class = CollectionForm
     template_name = 'collections/collection_form.html'
     success_url = reverse_lazy('collection_list')
 
 
 class CollectionListView(ListView):
-    model = CollectionForm
+    model = Collection
     template_name = 'collections/collection_list.html'
     context_object_name = 'collections'
